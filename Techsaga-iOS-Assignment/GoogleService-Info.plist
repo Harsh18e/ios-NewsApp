@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CLIENT_ID</key>
+	<string>461110751241-q1knan45d7irqr27adbh7c0aolime9dq.apps.googleusercontent.com</string>
+	<key>REVERSED_CLIENT_ID</key>
+	<string>com.googleusercontent.apps.461110751241-q1knan45d7irqr27adbh7c0aolime9dq</string>
+	<key>API_KEY</key>
+	<string>AIzaSyBwFK8crtUSilU9x1gUsLTh09nZtTn3Axc</string>
+	<key>GCM_SENDER_ID</key>
+	<string>461110751241</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>harsh.Techsaga-iOS-Assignment</string>
+	<key>PROJECT_ID</key>
+	<string>ios-techsaga</string>
+	<key>STORAGE_BUCKET</key>
+	<string>ios-techsaga.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:461110751241:ios:de99a2a740d11269f4c8d8</string>
+</dict>
+</plist>
