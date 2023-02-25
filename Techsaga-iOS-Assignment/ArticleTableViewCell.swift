@@ -1,19 +1,17 @@
 //
-//  HeadlinesTableViewCell.swift
+//  ArticleTableViewCell.swift
 //  Techsaga-iOS-Assignment
 //
 //  Created by Harsh Kumar Agrawal on 25/02/23.
 //
 
 import UIKit
-import UIKit
 
-class HeadlinesTableViewCell: UITableViewCell {
-
-    @IBOutlet private weak var headlineLabel: UILabel!
-    @IBOutlet private weak var dateLabel: UILabel!
-    @IBOutlet private weak var sourceLabel: UILabel!
+class ArticleTableViewCell: UITableViewCell {
     
+    @IBOutlet weak var dateLabel: UILabel!
+    @IBOutlet weak var sourceLabel: UILabel!
+    @IBOutlet weak var headlineLabel: UILabel!
     @IBOutlet weak var containerView: CustomUIView!
     
     override func awakeFromNib() {
@@ -22,9 +20,9 @@ class HeadlinesTableViewCell: UITableViewCell {
     }
     
     func setupCell(_ article: ArticleData?) {
-        guard let article = article else {return}
+        guard let article = article else { return }
         
-    //    headlineLabel.
+        headlineLabel.text = article.title
         dateLabel.text = article.publishedAt
         sourceLabel.text = article.source.name
     }

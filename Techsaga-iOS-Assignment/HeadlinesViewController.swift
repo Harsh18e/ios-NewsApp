@@ -25,7 +25,7 @@ class HeadlinesViewController: UIViewController, ViewModelDelegate {
         
         viewModel.delegate = self
         viewModel.makeNetworkCall()
-        tableView.register(HeadlinesTableViewCell.self, forCellReuseIdentifier: "HeadlinesCell")
+        tableView.register(ArticleTableViewCell.self, forCellReuseIdentifier: "cell")
     }
 }
 
@@ -35,11 +35,16 @@ extension HeadlinesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "HeadlinesCell" , for: indexPath) as! HeadlinesTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath) as! ArticleTableViewCell
         
         let article = self.viewModel.getArticle(indexPath.row)
         
         cell.setupCell(article)
         return cell
+    }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let storyboard = UIStoryboard(name: "Main", bundle: nil)
+        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+        self.navigationController?.pushViewController(vc, animated: true)
     }
 }

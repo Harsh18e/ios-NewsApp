@@ -17,7 +17,7 @@
                 <rect key="frame" x="0.0" y="0.0" width="438" height="155"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-xC-j9B" userLabel="Container View" customClass="CustomUIView" customModule="Assignment_TechSaga_iOS" customModuleProvider="target">
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ghu-xC-j9B" userLabel="Container View" customClass="CustomUIView" customModule="Techsaga_iOS_Assignment" customModuleProvider="target">
                         <rect key="frame" x="16" y="12" width="406" height="120"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="News Headline" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AmQ-Cp-ueP">
@@ -70,10 +70,10 @@
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="sX9-yK-dPw"/>
             <connections>
-                <outlet property="containerView" destination="ghu-xC-j9B" id="R5d-YE-wdj"/>
-                <outlet property="dateLabel" destination="fMD-qX-gVP" id="BVH-I1-SuV"/>
-                <outlet property="headlineLabel" destination="AmQ-Cp-ueP" id="wR5-1j-fzg"/>
-                <outlet property="sourceLabel" destination="oJG-kT-r6m" id="cXO-Lh-T4d"/>
+                <outlet property="containerView" destination="ghu-xC-j9B" id="jii-Qr-Aob"/>
+                <outlet property="dateLabel" destination="fMD-qX-gVP" id="cb1-Gb-g8r"/>
+                <outlet property="headlineLabel" destination="AmQ-Cp-ueP" id="HaN-Wy-Ufp"/>
+                <outlet property="sourceLabel" destination="oJG-kT-r6m" id="DAh-Gg-5RW"/>
             </connections>
             <point key="canvasLocation" x="145.03816793893128" y="58.802816901408455"/>
         </tableViewCell>
