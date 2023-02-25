@@ -44,7 +44,8 @@ extension HeadlinesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = storyboard.instantiateViewController(withIdentifier: "DetailsViewController")
+        let vc = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        vc.articleData = self.viewModel.getArticle(indexPath.row)
         self.navigationController?.pushViewController(vc, animated: true)
     }
 }
