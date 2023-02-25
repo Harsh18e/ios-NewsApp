@@ -17,6 +17,7 @@ class HeadlinesViewController: UIViewController, ViewModelDelegate {
     }
     
     @IBOutlet weak var tableView: UITableView!
+    
     private var viewModel = ViewModel()
     
     override func viewDidLoad() {
@@ -28,9 +29,9 @@ class HeadlinesViewController: UIViewController, ViewModelDelegate {
     }
 }
 
-extension HeadlinesViewController {
+extension HeadlinesViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        viewModel.getarticleCount()
+        return viewModel.getarticleCount()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

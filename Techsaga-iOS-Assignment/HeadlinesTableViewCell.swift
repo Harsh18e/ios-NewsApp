@@ -14,6 +14,8 @@ class HeadlinesTableViewCell: UITableViewCell {
     @IBOutlet private weak var dateLabel: UILabel!
     @IBOutlet private weak var sourceLabel: UILabel!
     
+    @IBOutlet weak var containerView: CustomUIView!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
