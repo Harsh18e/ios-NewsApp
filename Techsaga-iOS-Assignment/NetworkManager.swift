@@ -26,6 +26,7 @@ class NetworkManager {
                 let responseData = try JSONDecoder().decode(NewsData.self, from: data)
                 completion(.success(responseData))
                 
+                
             } catch(_) {
                 completion(.failure(.unableToParse))
             }

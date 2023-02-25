@@ -27,7 +27,7 @@ class ViewModel {
                 switch result {
                 case .success(let response):
                     strongSelf.articleList = response.articles
-                    
+                    strongSelf.delegate?.reloadTableView()
                     
                 case .failure(.unableToParse):
                     print("unable to parse")

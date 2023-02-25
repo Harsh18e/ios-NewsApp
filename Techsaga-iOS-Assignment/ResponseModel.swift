@@ -12,20 +12,20 @@ enum NetworkError: Error {
 }
 
 struct NewsData: Codable {
-    var status: String
+    var status: String?
     var articles: [ArticleData]
 }
 
 struct ArticleData: Codable {
-    var publishedAt: String
+    var publishedAt: String?
     //var urlToImage: String
-    var author: String
+    var author: String?
     var source: Source
-    var title: String
-    var description: String
+    var title: String?
+    var description: String?
 }
 
 struct Source: Codable {
-    var id: String
-    var name: String
+    var id: String?
+    var name: String?
 }
