@@ -24,8 +24,6 @@
 		F571F7F829A9DC7800CDAA5D /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F7F729A9DC7800CDAA5D /* LoginViewController.swift */; };
 		F571F7FA29A9DCE200CDAA5D /* HeadlinesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F7F929A9DCE200CDAA5D /* HeadlinesViewController.swift */; };
 		F571F7FC29A9DD6900CDAA5D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F7FB29A9DD6900CDAA5D /* ViewModel.swift */; };
-		F571F7FF29A9DD9900CDAA5D /* HeadlinesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F7FD29A9DD9900CDAA5D /* HeadlinesTableViewCell.swift */; };
-		F571F80029A9DD9900CDAA5D /* HeadlinesTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = F571F7FE29A9DD9900CDAA5D /* HeadlinesTableViewCell.xib */; };
 		F571F80229A9DE0400CDAA5D /* DetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F80129A9DE0400CDAA5D /* DetailsViewController.swift */; };
 		F571F80429A9DE3E00CDAA5D /* ResponseModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F80329A9DE3E00CDAA5D /* ResponseModel.swift */; };
 		F571F80629A9DE5800CDAA5D /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F571F80529A9DE5800CDAA5D /* NetworkManager.swift */; };
@@ -74,8 +72,6 @@
 		F571F7F729A9DC7800CDAA5D /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		F571F7F929A9DCE200CDAA5D /* HeadlinesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesViewController.swift; sourceTree = "<group>"; };
 		F571F7FB29A9DD6900CDAA5D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		F571F7FD29A9DD9900CDAA5D /* HeadlinesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeadlinesTableViewCell.swift; sourceTree = "<group>"; };
-		F571F7FE29A9DD9900CDAA5D /* HeadlinesTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeadlinesTableViewCell.xib; sourceTree = "<group>"; };
 		F571F80129A9DE0400CDAA5D /* DetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailsViewController.swift; sourceTree = "<group>"; };
 		F571F80329A9DE3E00CDAA5D /* ResponseModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResponseModel.swift; sourceTree = "<group>"; };
 		F571F80529A9DE5800CDAA5D /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -162,8 +158,6 @@
 				F571F7F729A9DC7800CDAA5D /* LoginViewController.swift */,
 				F571F7F929A9DCE200CDAA5D /* HeadlinesViewController.swift */,
 				F571F80129A9DE0400CDAA5D /* DetailsViewController.swift */,
-				F571F7FD29A9DD9900CDAA5D /* HeadlinesTableViewCell.swift */,
-				F571F7FE29A9DD9900CDAA5D /* HeadlinesTableViewCell.xib */,
 				F571F7FB29A9DD6900CDAA5D /* ViewModel.swift */,
 				F571F80329A9DE3E00CDAA5D /* ResponseModel.swift */,
 				F571F80529A9DE5800CDAA5D /* NetworkManager.swift */,
@@ -298,7 +292,6 @@
 			files = (
 				F571F7CE29A9D8CB00CDAA5D /* LaunchScreen.storyboard in Resources */,
 				F571F7F229A9D99900CDAA5D /* GoogleService-Info.plist in Resources */,
-				F571F80029A9DD9900CDAA5D /* HeadlinesTableViewCell.xib in Resources */,
 				F571F7CB29A9D8CB00CDAA5D /* Assets.xcassets in Resources */,
 				F55955B929AA05D1005C6BD1 /* ArticleTableViewCell.xib in Resources */,
 				F571F7C929A9D8CA00CDAA5D /* Main.storyboard in Resources */,
@@ -374,7 +367,6 @@
 				F571F7C629A9D8CA00CDAA5D /* ViewController.swift in Sources */,
 				F571F7F629A9DBF300CDAA5D /* CustomUIView.swift in Sources */,
 				F571F7C229A9D8CA00CDAA5D /* AppDelegate.swift in Sources */,
-				F571F7FF29A9DD9900CDAA5D /* HeadlinesTableViewCell.swift in Sources */,
 				F571F7C429A9D8CA00CDAA5D /* SceneDelegate.swift in Sources */,
 				F571F7FA29A9DCE200CDAA5D /* HeadlinesViewController.swift in Sources */,
 				F571F7FC29A9DD6900CDAA5D /* ViewModel.swift in Sources */,

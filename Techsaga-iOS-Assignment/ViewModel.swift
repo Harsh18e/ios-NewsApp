@@ -15,7 +15,19 @@ protocol ViewModelDelegate {
 
 class ViewModel {
     
-    private var articleList: [ArticleData]?
+    private var articleList: [ArticleData]? {
+        didSet {
+            guard let articleList = articleList else { return }
+            for i in articleList {
+                guard let urlString = i.urlToImage else {
+                    bgImages.append(UIImage(named: "news-image")!)
+                    continue
+                }
+                downloadImage(from: URL(string: urlString)!)
+            }
+        }
+    }
+    var bgImages = [UIImage]()
     var delegate: ViewModelDelegate?
     
     func makeNetworkCall() {
@@ -37,6 +49,23 @@ class ViewModel {
                 }
             }
         }
+    }
+    
+    func downloadImage(from url: URL)
+    {
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard error == nil else {
+                print("error occured !!")
+                return
+            }
+            guard let imageData = data, let image = UIImage(data: imageData) else {
+                    print("Error converting image data to UIImage")
+                    return
+                }
+            self.bgImages.append(image)
+        
+        }.resume()
     }
     
     func getarticleCount() -> Int{

@@ -7,49 +7,49 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "5EE9BE80-9131-4150-95AE-3747AD8F3617"
+            uuid = "2151E443-B7A1-4CCE-8D4B-34721C3B5B1C"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
-            filePath = "Techsaga-iOS-Assignment/HeadlinesTableViewCell.swift"
+            filePath = "Techsaga-iOS-Assignment/SceneDelegate.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "25"
-            endingLineNumber = "25"
-            landmarkName = "setupCell(_:)"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "getInitialViewController()"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "5EE9BE80-9131-4150-95AE-3747AD8F3617 - 379fbea199f6462d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Techsaga_iOS_Assignment.HeadlinesTableViewCell.setupCell(Swift.Optional&lt;Techsaga_iOS_Assignment.ArticleData&gt;) -&gt; ()"
-                  moduleName = "Techsaga-iOS-Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harshkumaragrawal/Desktop/TechSaga/Techsaga-iOS-Assignment/Techsaga-iOS-Assignment/HeadlinesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "80">
-               </Location>
-               <Location
-                  uuid = "5EE9BE80-9131-4150-95AE-3747AD8F3617 - 379fbea199f6462d"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "Techsaga_iOS_Assignment.HeadlinesTableViewCell.setupCell(Swift.Optional&lt;Techsaga_iOS_Assignment.ArticleData&gt;) -&gt; ()"
-                  moduleName = "Techsaga-iOS-Assignment"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/harshkumaragrawal/Desktop/TechSaga/Techsaga-iOS-Assignment/Techsaga-iOS-Assignment/HeadlinesTableViewCell.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "25"
-                  endingLineNumber = "25"
-                  offsetFromSymbolStart = "132">
-               </Location>
-            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BBFED57C-D5CE-42F5-A2AF-FA680E8D5872"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Techsaga-iOS-Assignment/SceneDelegate.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "getInitialViewController()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AE18A448-0B14-4E87-8E29-97C64621CFAD"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Techsaga-iOS-Assignment/HeadlinesViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "signOutButton(_:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

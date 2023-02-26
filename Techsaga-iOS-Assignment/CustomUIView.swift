@@ -8,6 +8,57 @@
 import Foundation
 import UIKit
 
+extension UIImageView {
+    func downloadImage(from url: URL, _ isSame: Bool)
+    {
+        if !isSame {
+            return
+        }
+        contentMode = .scaleToFill
+        URLSession.shared.dataTask(with: url) { data, response, error in
+            
+            guard error == nil else {
+                print("error occured !!")
+                return
+            }
+            guard let imageData = data, let image = UIImage(data: imageData) else {
+                    print("Error converting image data to UIImage")
+                    return
+                }
+            DispatchQueue.main.async {
+                    self.image = image
+                }
+        
+        }.resume()
+    }
+}
+
+extension UITableView {
+    func registerNib(_ viewClass: UIView.Type) {
+        let nib = UINib(nibName: viewClass.getNibName(), bundle: nil)
+        register(nib, forCellReuseIdentifier: viewClass.getCellIdentifier())
+    }
+}
+
+extension UIView {
+    
+    // MARK: - Class Methods
+    class func getNibName() -> String {
+        return NSStringFromClass(self).components(separatedBy: ".").last!
+    }
+    
+    class func getCellIdentifier() -> String {
+        return getNibName()
+    }
+}
+
+extension UIViewController {
+    static func getIdentifier() -> String {
+        let className = NSStringFromClass(self).components(separatedBy: ".").last!
+        return className
+    }
+}
+
 @IBDesignable
 public class CustomUIView: UIView {
 

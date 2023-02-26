@@ -8,6 +8,7 @@
 
 import Foundation
 import UIKit
+import GoogleSignIn
 
 class HeadlinesViewController: UIViewController, ViewModelDelegate {
     func reloadTableView() {
@@ -16,8 +17,18 @@ class HeadlinesViewController: UIViewController, ViewModelDelegate {
         }
     }
     
-    @IBOutlet weak var tableView: UITableView!
+    @IBAction func signOutButton(_ sender: Any) {
+        UserDefaults.standard.set(false, forKey: Constants.LOGINSTATUS)
+        
+        GIDSignIn.sharedInstance.signOut()
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: LoginViewController.self)) as! LoginViewController
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
+    }
     
+    @IBOutlet weak var tableView: UITableView!
     private var viewModel = ViewModel()
     
     override func viewDidLoad() {
@@ -25,7 +36,7 @@ class HeadlinesViewController: UIViewController, ViewModelDelegate {
         
         viewModel.delegate = self
         viewModel.makeNetworkCall()
-        tableView.register(ArticleTableViewCell.self, forCellReuseIdentifier: "cell")
+        tableView.register(UINib(nibName: "ArticleTableViewCell", bundle: nil), forCellReuseIdentifier: "articleCell")
     }
 }
 
@@ -35,17 +46,21 @@ extension HeadlinesViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell" , for: indexPath) as! ArticleTableViewCell
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "articleCell" , for: indexPath) as! ArticleTableViewCell
         
         let article = self.viewModel.getArticle(indexPath.row)
-        
-        cell.setupCell(article)
+        cell.cellIndex = indexPath.row
+        cell.setupCell(article, self.viewModel.bgImages[indexPath.row])
         return cell
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let storyboard = UIStoryboard(name: "Main", bundle: nil)
-        let vc = DetailsViewController(nibName: "DetailsViewController", bundle: nil)
+        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: String(describing: DetailsViewController.self)) as! DetailsViewController
+
         vc.articleData = self.viewModel.getArticle(indexPath.row)
-        self.navigationController?.pushViewController(vc, animated: true)
+        
+        vc.modalPresentationStyle = .fullScreen
+        self.present(vc, animated: true)
     }
 }

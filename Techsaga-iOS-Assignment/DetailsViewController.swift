@@ -15,12 +15,22 @@ class DetailsViewController: UIViewController {
     @IBOutlet weak var sourceLabel: UILabel!
     var articleData: ArticleData?
     
+    @IBOutlet weak var backButtonView: CustomUIView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        headlineLabel.text = articleData?.title ?? ""
-        dateLabel.text  = articleData?.publishedAt ?? ""
-        descriptionLabel.text = articleData?.description ?? ""
-        sourceLabel.text = articleData?.source.name ?? ""
+        let gesture = UITapGestureRecognizer(target: self, action: #selector(dismissVC))
+        backButtonView.addGestureRecognizer(gesture)
+        
+        headlineLabel.text = articleData?.title ?? "wrer"
+        let dateText = String((articleData?.publishedAt ?? "T").split(separator: "T")[0])
+        dateLabel.text  = dateText + " "
+        descriptionLabel.text = articleData?.description ?? "wwerw"
+        sourceLabel.text = articleData?.author ?? "cccc"
+    }
+    
+    @objc private func dismissVC(_ sender: Any) {
+        self.dismiss(animated: true)
     }
 }
